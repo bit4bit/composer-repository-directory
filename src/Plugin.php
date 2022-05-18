@@ -17,12 +17,12 @@ class Plugin implements PluginInterface
 
         foreach($directories as $directory) {
             $packages = glob($directory . DIRECTORY_SEPARATOR . '*', GLOB_ONLYDIR|GLOB_NOSORT);
-            foreach($packages as $package) {
+	    foreach($packages as $package) {
                 $composer_of_package = $package . DIRECTORY_SEPARATOR . 'composer.json';
-                if(file_exists($composer_of_package)) continue;
 
-                $packageData = JsonFile::parseJson(null, $composer_of_package);
+                if(!file_exists($composer_of_package)) continue;
 
+                $packageData = (new JsonFile($composer_of_package))->read();
                 $localRepository = $repositoryManager->createRepository('path',
                                                                         ['url' => $package],
                                                                         $packageData['name']);
