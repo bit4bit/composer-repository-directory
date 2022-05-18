@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  php:
+    user: "${DUID}:${DGID}"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/app:rw
