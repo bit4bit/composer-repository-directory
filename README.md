@@ -12,7 +12,7 @@ $ composer require bit4bit/composer-repository-directory
 add to composer.json:
 
 ~~~
- "extras": {
+ "extra": {
     "composer-repository-directory": {
       "directories": ["../../customer-packages"]
     }
