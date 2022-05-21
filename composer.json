@@ -1,32 +1,33 @@
 {
-  "name": "bit4bit/composer-repository-directory",
-  "description": "composer plugins tha adds support for packages from directories",
-  "type": "composer-plugin",
-  "minimum-stability": "dev",
-  "require": {
-    "composer-plugin-api": "^2.2"
-  },
-  "require-dev": {
-    "composer": "^2.2"
-  },
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Jovany Leandro G.C",
-      "email": "bit4bit@riseup.net"
+    "name": "bit4bit/composer-repository-directory",
+    "description": "composer plugins tha adds support for packages from directories",
+    "type": "composer-plugin",
+    "version": "1.0.0-dev",
+    "minimum-stability": "dev",
+    "require": {
+        "composer-plugin-api": "^2.2"
+    },
+    "require-dev": {
+        "composer": "^2.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+        "name": "Jovany Leandro G.C",
+        "email": "bit4bit@riseup.net"
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Bit4bit\\ComposerRepositoryDirectory\\": "src/"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bit4bit\\ComposerRepositoryDirectory\\": "src/"
+        }
+    },
+    "extra": {
+        "class": "Bit4bit\\ComposerRepositoryDirectory\\Plugin"
+    },
+    "scripts": {
+        "test": [
+            "composer validate --no-interaction"
+        ]
     }
-  },
-  "extra": {
-    "class": "Bit4bit\\ComposerRepositoryDirectory\\Plugin"
-  },
-  "scripts": {
-    "test": [
-      "composer validate --no-interaction"
-    ]
-  }
 }

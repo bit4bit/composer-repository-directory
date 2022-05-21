@@ -14,7 +14,22 @@ add to composer.json:
 ~~~
  "extra": {
     "composer-repository-directory": {
-      "directories": ["../../customer-packages"]
+      "directories": ["../../customer-packages"],
+      "require": {
+          ..add dependencies...
+      },
+      "require-dev": {
+          ..add dependencies...
+      }
     }
   }
+~~~
+
+## FAQ
+
+### not installed dependencies in recently clones
+
+~~~
+$ composer update #first time install main require and require-dev
+$ composer update #second time install from composer-repository-directory
 ~~~
