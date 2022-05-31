@@ -1,6 +1,11 @@
-# composer-repository-directory
+# composer-repository-directory DEPRECATED
 
-composer plugin that allow use packages from directories.
+Please use [composer-merge-plugin](https://github.com/wikimedia/composer-merge-plugin).
+
+You can simulate the same behaviour with:
+ - local packages only for development must be declare with autoload-dev
+
+deprecated composer plugin that allow use packages from directories.
 
 
 ## Usage
